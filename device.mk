@@ -69,6 +69,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # Vibrator
 $(call soong_config_set_bool,OPLUS_LINEAGE_VIBRATOR_HAL,USE_EFFECT_STREAM,true)
 
+# EROFS for martini's read-only system partitions.
+$(call soong_config_set_bool,oneplus_sm8350,martini_erofs,true)
+
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8350-common/common.mk)
 
